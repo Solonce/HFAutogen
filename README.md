@@ -10,11 +10,7 @@ HFAutogen bridges the gap between Hugging Face's powerful inference API and the 
 - [Usage](#usage)
 - [Features](#features)
 - [Dependencies](#dependencies)
-- [Configuration](#configuration)
-- [Documentation](#documentation)
 - [Examples](#examples)
-- [Troubleshooting](#troubleshooting)
-- [Contributors](#contributors)
 - [License](#license)
 
 ## Installation
@@ -75,4 +71,35 @@ HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserA
 
   - _input - _str_ required
     The initial input prompt.
+```
+
+## Features
+
+### Free to use, extremely lightweight access to open source HuggingFace Models.
+
+### Automatic Code Execution
+
+### Multi Agent Communication
+
+### Fast Prototyping
+<br><br><br>
+## Dependencies
+
+### pyautogen ==0.2.10
+
+### transformers =4.38.0
+<br><br><br>
+## Examples
+
+### Example 1
+In this example, we are importing the required functions to set up a user agent, an assistant agent, and initializing the chat between the two. We start the chat with the prompt given with _input.
+```
+from hfautogen import ModelAgent, UserAgent, InitChat
+
+_input = input("Enter Text:)
+
+user = UserAgent("user_agent")
+assistant = ModelAgent("model_agent")
+
+InitChat(user, assistant, _input)
 ```
