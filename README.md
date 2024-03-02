@@ -28,10 +28,10 @@ HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserA
   - name - _str_ required
     >The name of the `ModelAgent()`
   - system_message - _str_ optional
-    >_default:_ ""<br><br>
+    >_default:_ ""<br>
     >The contextual prompt for `ModelAgent()`
   - code_execution - _dict_ optional
-    >_default:_ False<br><br>
+    >_default:_ False<br>
     >A dictionary that contains a `work_dir` and `use_docker` entry:<br>
     >Ex: {"work_dir": "coding", "use_docker": False}
 
@@ -39,16 +39,16 @@ HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserA
   - name - _str_ required
     >The name of the `ModelAgent()`
   - max_consecutive_auto_reply - _int_ optional
-    >_default:_ 2<br><br>
+    >_default:_ 2<br>
     >The maximum number of consecutive automatic replies made by the `UserAgent()`
   - coding_dir - _str_ optional
-    >_default:_ "coding"<br><br>
+    >_default:_ "coding"<br>
     >The directory `UserAgent()` will use and operate out of.
   - user_docker - _bool_ optional
-    >_default:_ False<br><br>
+    >_default:_ False<br>
     >If true, `UserAgent()` will use a docker.
   - system_message - _str_ optional
-    >_default:_ ""<br><br>
+    >_default:_ ""<br>
     >The contextual prompt for `UserAgent()`
 - `InitChat(user, agent, _input)`
   - user - _`UserAgent()`_ required
