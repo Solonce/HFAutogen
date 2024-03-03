@@ -28,7 +28,9 @@ _input = input("Enter text or press Enter to load automated message.\n")
 hf_key = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 user = UserAgent("user_proxy")
-assistant = ModelAgent("assistant", hf_key, system_message="You are a friendly AI assistant.")
+assistant = ModelAgent("assistant",
+                        hf_key,
+                        system_message="You are a friendly AI assistant.")
 
 InitChat(user, assistant, _input)
 ```
