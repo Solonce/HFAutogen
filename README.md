@@ -24,10 +24,11 @@ In this example, we are importing the required functions to set up a user agent,
 ```python
 from hfautogen import ModelAgent, UserAgent, InitChat
 
-_input = input("Enter Text:)
+_input = input("Enter text or press Enter to load automated message.\n")
+hf_key = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
-user = UserAgent("user_agent")
-assistant = ModelAgent("model_agent")
+user = UserAgent("user_proxy")
+assistant = ModelAgent("assistant", hf_key, system_message="You are a friendly AI assistant.")
 
 InitChat(user, assistant, _input)
 ```
@@ -56,13 +57,20 @@ HFAutogen is designed to accelerate the prototyping phase of project development
 ## Usage
 HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserAgent()`, and `InitChat()`
 
-### `ModelAgent(name, system_message, code_execution)`
+### `ModelAgent(name, hf_key, hf_url, system_message, code_execution)`
 ```  
-    -name - _str_ required
+    name - _str_ required
         The name of the `ModelAgent()`
-        system_message - _str_ optional
-    
-    _default:_ "" - _str_ optional
+
+    hf_key - _str_ required
+        The API Key obtained on HuggingFace.
+
+    hf_url - _str_ optional
+        _default_: ""https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1""
+        The HuggingFace Inference API URL.
+
+    system_message - _str_ optional
+        _default:_ ""
         The contextual prompt for `ModelAgent()`
     
     code_execution - _dict_ optional
