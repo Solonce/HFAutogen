@@ -17,6 +17,7 @@ HFAutogen bridges the gap between Hugging Face's powerful inference API and the 
 ```
 pip install hfautogen
 ```
+
 ## Examples
 
 ### Example 1
@@ -34,27 +35,6 @@ assistant = ModelAgent("assistant",
 
 InitChat(user, assistant, _input)
 ```
-
-## Features
-
-### Free to use, extremely lightweight access to open source HuggingFace Models.
-
-HFAutogen leverages the power of open-source technology by integrating HuggingFace's Inference API with Autogen. HFAutogen provides users with state-of-the-art AI capabilities at no cost. This feature means that developers and researchers can access a wide range of pre-trained models for natural language processing (NLP) found on the HuggingFace Model Hub without worrying about the financial overhead. The lightweight nature of AutoGen's access mechanism ensures that users can start experimenting and deploying AI features in their projects quickly and efficiently, without the need for extensive setup or high-end computational resources.
-<br><br>
-
-### Automatic Code Execution
-
-With HFAutogen, users benefit from an environment that automates the code execution process. This feature is inhereted from Autogen, while reducing the barrier for entry into the tool. Designed to streamline the development workflow, HFAutogen makes it easier and faster to test and deploy multi-agent communication systems than ever before. Automatic code execution means that once the user configures their project settings and inputs, HFAutogen takes care of the rest—compiling, running, and providing outputs without manual intervention. This automation reduces the potential for human error, speeds up the development cycle, and allows users to focus more on the strategic aspects of their projects.
-<br><br>
-
-### Multi Agent Communication
-
-Multi-agent communication is at the heart of AutoGen's capabilities, enabling different AI agents to interact with each other in a coordinated manner. This feature is crucial for developing complex systems where multiple agents need to share information, make decisions, or work together towards a common goal. HFAutogen facilitates this by providing a seamless communication framework between the user and Autogen
-<br><br>
-### Fast Prototyping
-
-HFAutogen is designed to accelerate the prototyping phase of project development, allowing users to quickly move from concept to a working prototype. This feature is particularly beneficial in the fast-paced world of technology, where speed to market can be a critical competitive advantage. With HFAutogen, developers can rapidly test hypotheses, iterate on designs, and refine their projects with minimal delay. The combination of easy access to powerful AI models, automatic code execution, and support for multi-agent communication means that prototyping with HFAutogen is not only fast but also highly effective, enabling users to explore innovative ideas and solutions with agility.
-
 
 ## Usage
 HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserAgent()`, and `InitChat()`
@@ -117,9 +97,30 @@ HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserA
   - _input - _str_ required
     The initial input prompt.
 ```
-
-
 <br><br><br>
+
+## Features
+
+### Free to use, extremely lightweight access to open source HuggingFace Models.
+
+HFAutogen leverages the power of open-source technology by integrating HuggingFace's Inference API with Autogen. HFAutogen provides users with state-of-the-art AI capabilities at no cost. This feature means that developers and researchers can access a wide range of pre-trained models for natural language processing (NLP) found on the HuggingFace Model Hub without worrying about the financial overhead. The lightweight nature of AutoGen's access mechanism ensures that users can start experimenting and deploying AI features in their projects quickly and efficiently, without the need for extensive setup or high-end computational resources.
+<br><br>
+
+### Automatic Code Execution
+
+With HFAutogen, users benefit from an environment that automates the code execution process. This feature is inhereted from Autogen, while reducing the barrier for entry into the tool. Designed to streamline the development workflow, HFAutogen makes it easier and faster to test and deploy multi-agent communication systems than ever before. Automatic code execution means that once the user configures their project settings and inputs, HFAutogen takes care of the rest—compiling, running, and providing outputs without manual intervention. This automation reduces the potential for human error, speeds up the development cycle, and allows users to focus more on the strategic aspects of their projects.
+<br><br>
+
+### Multi Agent Communication
+
+Multi-agent communication is at the heart of AutoGen's capabilities, enabling different AI agents to interact with each other in a coordinated manner. This feature is crucial for developing complex systems where multiple agents need to share information, make decisions, or work together towards a common goal. HFAutogen facilitates this by providing a seamless communication framework between the user and Autogen
+<br><br>
+### Fast Prototyping
+
+HFAutogen is designed to accelerate the prototyping phase of project development, allowing users to quickly move from concept to a working prototype. This feature is particularly beneficial in the fast-paced world of technology, where speed to market can be a critical competitive advantage. With HFAutogen, developers can rapidly test hypotheses, iterate on designs, and refine their projects with minimal delay. The combination of easy access to powerful AI models, automatic code execution, and support for multi-agent communication means that prototyping with HFAutogen is not only fast but also highly effective, enabling users to explore innovative ideas and solutions with agility.
+
+
+
 ## To Do:
 - GroupChat functionality
 - Improved conversational memory
