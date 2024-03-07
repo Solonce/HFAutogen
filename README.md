@@ -120,10 +120,10 @@ HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserA
 
 
 <br><br><br>
-## Dependencies
-
-### pyautogen ==0.2.10
-
-### transformers =4.38.0
+## To Do:
+- GroupChat functionality
+- Improved conversational memory
+- Better error handling
+  
 <br><br><br>
 
