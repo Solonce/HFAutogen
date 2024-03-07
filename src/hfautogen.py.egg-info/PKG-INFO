@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: hfautogen.py
+Version: 1.4
+Summary: A seemless way to use HuggingFace Inference API with Autogen.
+Home-page: https://github.com/Solonce/HFAutogen
+Author: Solomon Ince
+Author-email: solomon@solonce.com
+Project-URL: Bug Tracker, https://github.com/Solonce/HFAutogen/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+ # HFAutogen
+Seemlessly use models provided by the HuggingFace Inference API  with Autogen.
+
+## Introduction
+HFAutogen bridges the gap between Hugging Face's powerful inference API and the convenience of AutoGen, providing a seamless integration for developers looking to leverage the best of both worlds. This software enables the use of Hugging Face models with AutoGen's automated code generation capabilities, making it easier to implement AI-powered features without the need for large computational power.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Examples](#examples)
+- [License](#license)
+
+## Installation
+```
+pip install hfautogen
+```
+## Examples
+
+### Example 1
+In this example, we are importing the required functions to set up a user agent, an assistant agent, and initializing the chat between the two. We start the chat with the prompt given with _input.
+```python
+from hfautogen import ModelAgent, UserAgent, InitChat
+
+_input = input("Enter text or press Enter to load automated message.\n")
+hf_key = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+user = UserAgent("user_proxy")
+assistant = ModelAgent("assistant",
+                        hf_key,
+                        system_message="You are a friendly AI assistant.")
+
+InitChat(user, assistant, _input)
+```
+
+## Features
+
+### Free to use, extremely lightweight access to open source HuggingFace Models.
+
+HFAutogen leverages the power of open-source technology by integrating HuggingFace's Inference API with Autogen. HFAutogen provides users with state-of-the-art AI capabilities at no cost. This feature means that developers and researchers can access a wide range of pre-trained models for natural language processing (NLP) found on the HuggingFace Model Hub without worrying about the financial overhead. The lightweight nature of AutoGen's access mechanism ensures that users can start experimenting and deploying AI features in their projects quickly and efficiently, without the need for extensive setup or high-end computational resources.
+<br><br>
+
+### Automatic Code Execution
+
+With HFAutogen, users benefit from an environment that automates the code execution process. This feature is inhereted from Autogen, while reducing the barrier for entry into the tool. Designed to streamline the development workflow, HFAutogen makes it easier and faster to test and deploy multi-agent communication systems than ever before. Automatic code execution means that once the user configures their project settings and inputs, HFAutogen takes care of the rest—compiling, running, and providing outputs without manual intervention. This automation reduces the potential for human error, speeds up the development cycle, and allows users to focus more on the strategic aspects of their projects.
+<br><br>
+
+### Multi Agent Communication
+
+Multi-agent communication is at the heart of AutoGen's capabilities, enabling different AI agents to interact with each other in a coordinated manner. This feature is crucial for developing complex systems where multiple agents need to share information, make decisions, or work together towards a common goal. HFAutogen facilitates this by providing a seamless communication framework between the user and Autogen
+<br><br>
+### Fast Prototyping
+
+HFAutogen is designed to accelerate the prototyping phase of project development, allowing users to quickly move from concept to a working prototype. This feature is particularly beneficial in the fast-paced world of technology, where speed to market can be a critical competitive advantage. With HFAutogen, developers can rapidly test hypotheses, iterate on designs, and refine their projects with minimal delay. The combination of easy access to powerful AI models, automatic code execution, and support for multi-agent communication means that prototyping with HFAutogen is not only fast but also highly effective, enabling users to explore innovative ideas and solutions with agility.
+
+
+## Usage
+HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserAgent()`, and `InitChat()`
+
+### `ModelAgent(name, hf_key, hf_url, system_message, code_execution)`
+```
+    name - _str_ required
+        The name of the `ModelAgent()`
+
+    hf_key - _str_ required
+        The API Key obtained on HuggingFace.
+
+    hf_url - _str_ optional
+        _default_: ""https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1""
+        The HuggingFace Inference API URL.
+
+    system_message - _str_ optional
+        _default:_ ""
+        The contextual prompt for `ModelAgent()`
+
+    code_execution - _dict_ optional
+        _default:_ False
+        A dictionary that contains a `work_dir` and `use_docker` entry:
+
+        Ex:
+           {"work_dir": "coding", "use_docker": False}
+```
+<br>
+
+### `UserAgent(name, max_consecutive_auto_reply, code_dir, use_docker, system_message)`
+```
+  - name - _str_ required
+    The name of the `ModelAgent()`
+
+  - max_consecutive_auto_reply - _int_ optional
+    _default:_ 2
+    The maximum number of consecutive automatic replies made by the `UserAgent()`
+
+  - coding_dir - _str_ optional
+    _default:_ "coding"
+    The directory `UserAgent()` will use and operate out of.
+
+  - user_docker - _bool_ optional
+    _default:_ False
+    If true, `UserAgent()` will use a docker.
+
+  - system_message - _str_ optional
+    _default:_ ""
+    The contextual prompt for `UserAgent()`
+```
+
+### `InitChat(user, agent, _input)`
+```
+  - user - _`UserAgent()`_ required
+    A `UserAgent()` object
+
+  - agent - _`ModeAgent()`_ required
+    A `ModelAgent()` object
+
+  - _input - _str_ required
+    The initial input prompt.
+```
+
+
+<br><br><br>
+## Dependencies
+
+### pyautogen ==0.2.10
+
+### transformers =4.38.0
+<br><br><br>
+

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/hfautogen/__init__.py
+src/hfautogen/hfautogen.py
+src/hfautogen.egg-info/PKG-INFO
+src/hfautogen.egg-info/SOURCES.txt
+src/hfautogen.egg-info/dependency_links.txt
+src/hfautogen.egg-info/top_level.txt

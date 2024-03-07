@@ -40,7 +40,7 @@ InitChat(user, assistant, _input)
 HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserAgent()`, and `InitChat()`
 
 ### `ModelAgent(name, hf_key, hf_url, system_message, code_execution)`
-```  
+```
     name - _str_ required
         The name of the `ModelAgent()`
 
@@ -54,7 +54,7 @@ HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserA
     system_message - _str_ optional
         _default:_ ""
         The contextual prompt for `ModelAgent()`
-    
+
     code_execution - _dict_ optional
         _default:_ False
         A dictionary that contains a `work_dir` and `use_docker` entry:
@@ -68,7 +68,7 @@ HFAutogen uses three objects that are useful to the user. `ModelAgent()`, `UserA
 ```
   - name - _str_ required
     The name of the `ModelAgent()`
-  
+
   - max_consecutive_auto_reply - _int_ optional
     _default:_ 2
     The maximum number of consecutive automatic replies made by the `UserAgent()`
@@ -125,6 +125,6 @@ HFAutogen is designed to accelerate the prototyping phase of project development
 - GroupChat functionality
 - Improved conversational memory
 - Better error handling
-  
+
 <br><br><br>
 
